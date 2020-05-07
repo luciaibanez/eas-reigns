@@ -15,35 +15,26 @@ currentCardImage.onload = () => {
 };
 
 let cards_data = [
-    ["adviser", ["Swipe left or right to make a decision", ["Left", 0, 0, 0], ["Right...", 0, 0, 0]]],
-    ["adviser", ["Don't let your money or popularity reach 0. Good luck!", ["Ok...", 0, 0, 0], ["Wait...", 0, 0, 0]]],
-    ["economic", ["Some guy is saying he can double our textile production and halve the cost", ["We don't need more textiles or money", -100, 0, 0], ["Invest in the guy's workshop", 50, -0, -50]]],
-    ["economic", ["Should we use steam engines to transport goods", ["No, keep having horses pull wagons", -25, 25, 0], ["Yes, let's move some merchandise", 50, -25, -50]]],
-    ["economic", ["All the trains going around are scaring the townsfolk", ["Keep the number of trains in check", -25, 25, 0], ["Build walls around tracks", 0, 25, -50]]],
-    ["economic", ["Moths seem to be turning black...", ["Maybe we should cut down on coal usage a little", -50, -50, 50], ["So?", 0, 0, 0]]],
-    ["economic", ["Should we regulate the number of steam boats?", ["Yes, they might be bad for the fish", -50, -25, 0], ["No, I want to see the rivers filled with them!", 25, 25, -50]]],
-    ["economic", ["They found some weird oil while digging for brine in America", ["I don't care unless you can cook with it", 0, -25, 0], ["Invest in oil", 100, 25, -50]]],
-    ["economic", ["Guy named Gesner says he invented something called Kerosene", ["We shall turn night into day with it!", 100, 50, -50], ["Ignore him and keep using more expensive whale oil and alcohol", -25, -50, 0]]],
-    ["economic", ["People are drinking petrol as medicine, and it seems to be working...", ["That's crazy talk! Have them stop!", 0, -50, 25], ["Bring me a pint too!", 25, 50, -50]]],
-    ["economic", ["Oil spills in lakes and rivers are killing fish", ["Regulate oil companies", -50, -50, 100], ["Plenty of fish in the sea", 0, 0, -100]]],
-    ["economic", ["Someone figured out how to use gasoline to power cars, should we prefer them over horses?", ["Finally we can stop having horse manure in the streets!", 50, 50, -50], ["But I like horses", -25, -25, 50]]],
-    ["economic", ["Our scientists figured out that we can use natural gas instead of just flaring it", ["Finally some good news!", 50, 50, 50], ["Finally some good news!", 50, 50, 50]]],
-    ["economic", ["Oil companies are getting pretty big, should we try to split them up?", ["Yes, let's bring some competition", -50, 25, 25], ["I kinda like their \"gifts\" though...", 100, -25, -50]]],
-    ["economic", ["Our engineers found a way to enlarge oil wells with hydraulics to extract gas more cheaply", ["Let's get fracking!", 50, 25, -100], ["Maybe we should study its environmental effects first?", -50, -25, 50]]],
-    ["economic", ["Is it getting a bit hot in here?", ["Just turn on the AC", 0, 0, -25], ["Have our scientists look into it", -50, 25, 50]]],
-    ["economic", ["National Academy of Science is saying they need money to research climate change", ["Eh maybe later", 0, -25, -100], ["Sure", -100, 25, 50]]],
-    ["economic", ["There has been more research on climate change, results ain't pretty (environment meter unlocked)", ["What...", 0, -25, 0], ["Who...", 0, -25, 0]]],
-    ["economic", ["NASA wants funding for some program called Global Habitability", ["We don't have money for that!", 25, -25, -25], ["Whatever they need", -50, 25, 25]]],
-    ["economic", ["Should we invest in renewable energies?", ["And lose out on the coal market? I think not!", 50, 50, -100], ["Our sponsors won't be happy about this...", -50, -25, 50]]],
-    ["economic", ["Intergovernmental Panel on Climate Change is warning us that global temparatures have risen around 1 F over the last century", ["Good, that should lower our heating costs", 0, 0, -100], ["Enact a carbon tax", 25, -100, 50]]],
-    ["economic", ["IPCC is 95% sure that humans are the \"dominant cause\" of global warming", ["I just don't think there is any sicence to support that, buddy", 0, -25, -50], ["Subsidize sustainable energy companies?", -150, 0, 50]]],
-    ["adviser", ["You've survived into the present day! Hopefully the game made you think about climate change a bit. Thanks for playing!", ["Take a short survey", 0, 0, 0], ["Start over", 0, 0, 0]]]
-];
+    ["student", ["City needs you, swipe left or right to continue", ["Left", 0, 0, 0], ["Right...", 0, 0, 0]]],
+    ["student", ["Swipe left or right to make a decision", ["Left", 0, 0, 0], ["Right...", 0, 0, 0]]],
+    ["student", ["Don't let your points reach 0. Good luck!", ["Ok...", 0, 0, 0], ["Wait...", 0, 0, 0]]],
+    ["work", ["Some guy is building a new architectures, where do you want to have it?", ["In the work place", -100, 0, 0], ["Outside the city", 50, -0, -50]]],
+    ["work", ["Should we use steam engines to transport goods", ["No, keep having horses pull wagons", -25, 25, 0], ["Yes, let's move some merchandise", 50, -25, -50]]],
+    ["worker", ["What should I take to go to work?", ["By car", -25, 25, 0], ["Walking", 0, 25, -50]]],
+    ["mother", ["What should I buy my food?", ["In the supermarket", -50, -50, 50], ["Urban garden", 0, 0, 0]]],
+    ["student", ["Should we have more library?", ["Yes, they might be for the students", -50, -25, 0], ["No I prefer to build malls", 25, 25, -50]]],
+    ["muslim", ["Do you think that we should have spaces for women and others for men", ["Yes", 0, -25, 0], ["No", 100, 25, -50]]],
+    ["worker", ["Guy named Gesner says he invented something called co-working spaces", ["We should listen to him!", 100, 50, -50], ["Ignore him", -25, -50, 0]]],
+    ["work", ["People are stealing petrol for their own cars", ["That's crazy talk! Have them stop!", 0, -50, 25], ["I'm going to steal too!", 25, 50, -50]]],
+    ["mother", ["Oil spills in lakes and rivers are killing fish", ["Start using ecological tranport", -50, -50, 100], ["Plenty of fish in the sea", 0, 0, -100]]],
+    ["mother", ["Someone figured out how to improve our urban gardens!", ["Finally we can stop going to supermarkets!", 50, 50, -50], ["But I junk food", -25, -25, 50]]],
+    ["muslim", ["Girl named Ruperta says he invented something called rest-cabins", ["Finally some good news!", 50, 50, 50], ["Finally some bad news!", 50, 50, 50]]],
+
 
 let game_over = [
-    "We're bankrupt! Banks are seizing all our assets!",
-    "The people are revolting! Better flee before they get to us!",
-    "Half the country is swallowed by rising sea levels! We better abandon the capital and move to the mountains!"
+    "The citizens need help to take control of the situation and be more active in living the city life! We are succumbing by the technology of the city",
+    "The city is not human-friendly!",
+    "Men can no longer live in places of inequality or passivity, so now it’s your turn"
 ];
 
 var year = -1;
